@@ -1,1 +1,9 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+  <h2>Friends</h2>
+  <ul class="friend-list">
+    <li *ngFor="let friend of friends" (click)="selectFriend(friend)">
+      {{ friend.name }}
+    </li>
+  </ul>
+  <button class="all-button" (click)="viewAll()">View All</button>
+</div>
