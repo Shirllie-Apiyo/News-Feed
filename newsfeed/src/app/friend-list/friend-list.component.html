@@ -1,1 +1,8 @@
-<p>friend-list works!</p>
+<div class="friend-list">
+  <h2>Friends</h2>
+  <ul class="list">
+    <li *ngFor="let friend of friends" (click)="selectFriend(friend)">
+      {{ friend.name }}
+    </li>
+  </ul>
+</div>
