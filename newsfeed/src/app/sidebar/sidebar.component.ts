@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { LoggerService } from '../logger.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -20,7 +21,7 @@ export class SidebarComponent implements OnInit {
     {id:10, name:'Billy'}
   ];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService,  private logger: LoggerService) {}
 
   ngOnInit(): void {
     this.friends = this.apiService.getFriends();

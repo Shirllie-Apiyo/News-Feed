@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-newsfeed',
@@ -70,7 +71,7 @@ export class NewsfeedComponent implements OnInit {
     },
   ];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private logger: LoggerService) {}
 
   ngOnInit(): void {
     this.newsfeedItems = this.apiService.getNewsfeedItems();
