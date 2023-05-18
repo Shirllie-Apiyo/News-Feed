@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-friend-list',
@@ -21,9 +22,11 @@ export class FriendListComponent implements OnInit {
     {id:10, name:'Billy'}
   ];
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.friends = this.apiService.getFriends();
+  }
 
   selectFriend(friend: any): void {
     this.friendSelected.emit(friend);

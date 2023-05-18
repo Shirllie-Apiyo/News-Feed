@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-newsfeed',
@@ -69,15 +70,19 @@ export class NewsfeedComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.newsfeedItems = this.apiService.getNewsfeedItems();
+  }
 
   addComment(itemId:number): void {
     console.log('Add comment to item:', itemId);
+    this.apiService.addComment(itemId, 'Sample comment');
   }
 
   favorite(itemId: number): void {
     console.log('Favorite item:', itemId);
+    this.apiService.favorite(itemId);
   }
 }
