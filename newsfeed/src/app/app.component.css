@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.sidebar {
+  margin-right: 1rem;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;}
+
+    .sidebar {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    .main-content {
+      width: 100%;
+    }
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Add tablet-specific styles here */
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    /* Add desktop-specific styles here */
+  }

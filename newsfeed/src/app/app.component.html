@@ -1,5 +1,12 @@
-<app-sidebar></app-sidebar>
-<app-friend-list></app-friend-list>
-<app-newsfeed></app-newsfeed>
-
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="main-content">
+    <app-friend-list></app-friend-list>
+    <app-newsfeed></app-newsfeed>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
