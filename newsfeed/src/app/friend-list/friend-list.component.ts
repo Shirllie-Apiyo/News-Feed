@@ -9,15 +9,15 @@ export class FriendListComponent implements OnInit {
   @Output() friendSelected = new EventEmitter<any>();
 
   friends = [
-    {id:1, name:'Margaret'},
-    {id:2, name:'Peace'},
-    {id:3, name:'Love'},
-    {id:4, name:'Patience'},
-    {id:5, name:'Mungai'},
+    {id:1, name:'Kingston'},
+    {id:2, name:'Wanjiku'},
+    {id:3, name:'Kevin'},
+    {id:4, name:'Judie'},
+    {id:5, name:'Dan'},
     {id:6, name:'Stellah'},
     {id:7, name:'Warren'},
     {id:8, name:'Lydia'},
-    {id:9, name:'Muthoni'},
+    {id:9, name:'Shirllie'},
     {id:10, name:'Billy'}
   ];
 

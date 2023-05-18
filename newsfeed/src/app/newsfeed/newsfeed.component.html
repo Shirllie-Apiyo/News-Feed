@@ -1,1 +1,9 @@
-<p>newsfeed works!</p>
+<div class="newsfeed">
+  <div *ngFor="let item of newsfeedItems" class="newsfeed-item">
+    <h3>{{ item.subject }} {{ item.action }} {{ item.object }}</h3>
+    <div class="actions">
+      <button (click)="addComment(item.id)">Comment</button>
+      <button (click)="favorite(item.id)">Favorite</button>
+    </div>
+  </div>
+</div>
