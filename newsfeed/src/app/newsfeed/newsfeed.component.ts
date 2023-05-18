@@ -7,16 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsfeedComponent implements OnInit {
   newsfeedItems = [
-    // {id:1, name:'Kingston'},
-    // {id:2, name:'Wanjiku'},
-    // {id:3, name:'Kevin'},
-    // {id:4, name:'Judie'},
-    // {id:5, name:'Dan'},
-    // {id:6, name:'Stellah'},
-    // {id:7, name:'Warren'},
-    // {id:8, name:'Lydia'},
-    // {id:9, name:'Shirllie'},
-    // {id:10, name:'Billy'}
     {
       id: 1,
       subject: 'Kingston',
